@@ -82,7 +82,7 @@ export const TablaContactos = ({ usuarios }) => {
                                                 (row.licencia.tipo === 'PV' && '#FD8469')
                                             ),
                                         fontWeight: 'normal',
-                                        color: 'white',
+                                        color: 'black',
                                         fontSize: '1rem',
                                         borderRadius: 15,
                                         padding: '7px 15px',
