@@ -76,13 +76,13 @@ export const UserScreen = () => {
             }
         }
 
-        if (tipoLic === 'PA' && tipoLic !== user.tipoLicencia) {
+        if (tipoLic === 'PA' && tipoLic !== user.licencia.tipo) {
             regModify.cantidadLicencias.anuales = parseInt(regModify.cantidadLicencias.anuales) + 1;
             regModify.cantidadLicencias.vitalicias = parseInt(regModify.cantidadLicencias.vitalicias) - 1;
             regModify.registro.dineroTotal = parseInt(regModify.registro.dineroTotal) - 300;
         }
 
-        if (tipoLic === 'PV' && tipoLic !== user.tipoLicencia) {
+        if (tipoLic === 'PV' && tipoLic !== user.licencia.tipo) {
             regModify.cantidadLicencias.vitalicias = parseInt(regModify.cantidadLicencias.vitalicias) + 1;
             regModify.cantidadLicencias.anuales = parseInt(regModify.cantidadLicencias.anuales) - 1;
             regModify.registro.dineroTotal = parseInt(regModify.registro.dineroTotal) + 300;
