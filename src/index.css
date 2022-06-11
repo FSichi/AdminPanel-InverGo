@@ -1,13 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
 body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #111827;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* TABLE */
+
+.table-styles {
+  min-width: 650px;
+}
+
+.table-styles .MuiTableCell-root {
+  border-left: 0px solid rgba(224, 224, 224, 1);
+  border-right: 0px solid rgba(224, 224, 224, 1);
+  border-top: 0px solid rgba(224, 224, 224, 1);
+  border-bottom: 0px solid rgba(224, 224, 224, 1);
+}
+
+.table-styles .MuiTypography-colorInherit {
+  color: white;
+}
+
+.table-styles .MuiInputBase-input {
+  color: white
+}
+
+.table-styles .MuiSelect-icon {
+  color: white
+}
+
+.table-styles .MuiSvgIcon-root {
+  color: white
+}
+
+.css-pdct74-MuiTablePagination-selectLabel {
+  color: white;
+}
+
+.css-levciy-MuiTablePagination-displayedRows {
+  color: white;
 }
