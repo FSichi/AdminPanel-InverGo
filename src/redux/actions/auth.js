@@ -20,9 +20,10 @@ export const startRegisterWithEmailPasswordName = (email, name, usuario) => {
 
                 axios.post('https://backend-invergo-production.up.railway.app/usuarios', userDB).then(res => {
                     Toast.fire({ icon: 'success', title: 'Usuario Creado Correctamente' }).then(() => {
-                        setTimeout(() => {
-                            window.location.reload();
-                        }, 1000);
+                        /*                         setTimeout(() => {
+                                                    window.location.reload();
+                                                }, 1000); */
+                        window.location.reload();
                     });
                 });
             })
@@ -40,9 +41,10 @@ export const updateUserInfoDB = (usuario, registro) => {
             axios.put(`https://backend-invergo-production.up.railway.app/registros/${registro._id}`, registro).then(res => {
 
                 Toast.fire({ icon: 'success', title: 'Usuario Actualizado con Exito' }).then(() => {
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 1000)
+                    /*                     setTimeout(() => {
+                                            window.location.reload();
+                                        }, 1000) */
+                    window.location.reload();
                 });
 
             });

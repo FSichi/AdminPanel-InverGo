@@ -57,9 +57,10 @@ export const Commerce = () => {
 
         axios.post("https://backend-invergo-production.up.railway.app/registros", regNuevo).then((resp) => {
             Toast.fire({ icon: 'success', title: 'Registro Finalizado Con Exito. Se ha creado un nuevo Registro.' }).then(() => {
-                setTimeout(() => {
-                    window.location.reload();
-                }, 1100);
+                /*                 setTimeout(() => {
+                                    window.location.reload();
+                                }, 1100); */
+                window.location.reload();
             });
         });
 

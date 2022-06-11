@@ -49,10 +49,11 @@ export const PeticionScreen = () => {
                 axios.put(`https://backend-invergo-production.up.railway.app/peticiones/${id}`, peticionEdit).then((resp) => {
 
                     Toast.fire({ icon: 'success', title: 'Peticion Actualizada, Recuerda enviar un correo avisando al usuario' }).then(() => {
-                        setTimeout(() => {
-                            window.location.reload();
-                        }, 1100);
-                    })
+                        /*                         setTimeout(() => {
+                                                    window.location.reload();
+                                                }, 1100); */
+                        window.location.reload();
+                    });
                 });
             }
         });
