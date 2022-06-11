@@ -37,14 +37,14 @@ export const UserScreen = () => {
     const onSubmit = (data) => {
 
         var tipoLic = '';
-        var fechaFin = '';
+        var fechaFin = '-';
 
         if (changePlan === 'PA') {
             tipoLic = 'PA';
             fechaFin = data.fin
         } else {
             tipoLic = 'PV';
-            fechaFin = '';
+            fechaFin = '-';
         }
 
         var usuario = {

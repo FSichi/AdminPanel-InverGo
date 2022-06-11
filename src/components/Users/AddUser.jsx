@@ -31,14 +31,14 @@ export const AddUser = () => {
     const handleRegister = (e) => {
 
         var tipoLic = '';
-        var fechaFin = '';
+        var fechaFin = '-';
 
         if (changePlan) {
             tipoLic = 'PA';
             fechaFin = fechaFinalizacion
         } else {
             tipoLic = 'PV';
-            fechaFin = '';
+            fechaFin = '-';
         }
 
         var usuario = {
