@@ -21,17 +21,16 @@ export const UserScreen = () => {
     const { register, handleSubmit } = useForm();
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/usuarios/${id}`).then((resp) => {
+        axios.get(`https://backend-invergo-production.up.railway.app/usuarios/${id}`).then((resp) => {
             setUser(resp.data);
             setLicenciaState(resp.data.licencia.activa);
 
             (resp.data.licencia.tipo === 'PV') ? setChangePlan('PV') : setChangePlan('PA');
 
-            axios.get("http://localhost:4000/registros/estado/activo").then((resp) => {
+            axios.get("https://backend-invergo-production.up.railway.app/registros/estado/activo").then((resp) => {
                 setRegActivo(resp.data);
                 setRender(true);
             });
-
         });
     }, [id]);
 

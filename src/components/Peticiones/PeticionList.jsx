@@ -11,7 +11,7 @@ export const PeticionList = () => {
     const [charged, setCharged] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:4000/peticiones/table/all").then((resp) => {
+        axios.get("https://backend-invergo-production.up.railway.app/peticiones/table/all").then((resp) => {
             setPeticionesActivas(resp.data[0]);
             setPeticionesCompletadas(resp.data[1]);
             setCharged(true);

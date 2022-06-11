@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, TablePagination } from '@mui/material';
 
-
 export const TablaHistorial = ({ registros }) => {
 
     const [page, setPage] = useState(0);

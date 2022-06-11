@@ -9,7 +9,7 @@ export const UserList = () => {
     const [listUsuarios, setListUsuarios] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:4000/usuarios").then((resp) => {
+        axios.get("https://backend-invergo-production.up.railway.app/usuarios").then((resp) => {
             setListUsuarios(ordenarUsuariosByFecha(resp.data));
         });
     }, []);

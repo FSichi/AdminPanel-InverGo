@@ -13,10 +13,10 @@ export const Commerce = () => {
     const [charged, setCharged] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:4000/registros").then((resp) => {
+        axios.get("https://backend-invergo-production.up.railway.app/registros").then((resp) => {
             setListOfRegistros(ordenarRegistrosByEstado(resp.data));
         });
-        axios.get("http://localhost:4000/registros/dash/all").then((resp) => {
+        axios.get("https://backend-invergo-production.up.railway.app/registros/dash/all").then((resp) => {
             setRegistroActivoInfo(resp.data);
             setCharged(true);
         });
@@ -53,13 +53,13 @@ export const Commerce = () => {
             }
         }
 
-        axios.put(`http://localhost:4000/registros/${registroActivoInfo[0]._id}`, regOld);
+        axios.put(`https://backend-invergo-production.up.railway.app/registros/${registroActivoInfo[0]._id}`, regOld);
 
-        axios.post("http://localhost:4000/registros", regNuevo).then((resp) => {
+        axios.post("https://backend-invergo-production.up.railway.app/registros", regNuevo).then((resp) => {
             Toast.fire({ icon: 'success', title: 'Registro Finalizado Con Exito. Se ha creado un nuevo Registro.' }).then(() => {
                 setTimeout(() => {
                     window.location.reload();
-                }, 1500);
+                }, 1100);
             });
         });
 

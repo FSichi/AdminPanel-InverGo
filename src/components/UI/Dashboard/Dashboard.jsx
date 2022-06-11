@@ -10,11 +10,11 @@ export const Dashboard = () => {
     const [render, setRender] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:4000/usuarios/dash/all").then((resp) => {
+        axios.get("https://backend-invergo-production.up.railway.app/usuarios/dash/all").then((resp) => {
 
             setUsersLength(resp.data);
 
-            axios.get("http://localhost:4000/usuarios/dash/money").then((resp) => {
+            axios.get("https://backend-invergo-production.up.railway.app/usuarios/dash/money").then((resp) => {
                 setMoneyDist(resp.data);
                 setRender(true);
             });

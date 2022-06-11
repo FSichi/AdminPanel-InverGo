@@ -11,7 +11,7 @@ export const PeticionScreen = () => {
     const [idUser, setIdUser] = useState('');
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/peticiones/${id}`).then((resp) => {
+        axios.get(`https://backend-invergo-production.up.railway.app/peticiones/${id}`).then((resp) => {
             setPeticion(resp.data[0]);
             setIdUser(resp.data[1]);
         });
@@ -46,12 +46,12 @@ export const PeticionScreen = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                axios.put(`http://localhost:4000/peticiones/${id}`, peticionEdit).then((resp) => {
+                axios.put(`https://backend-invergo-production.up.railway.app/peticiones/${id}`, peticionEdit).then((resp) => {
 
                     Toast.fire({ icon: 'success', title: 'Peticion Actualizada, Recuerda enviar un correo avisando al usuario' }).then(() => {
                         setTimeout(() => {
                             window.location.reload();
-                        }, 1500);
+                        }, 1100);
                     })
                 });
             }

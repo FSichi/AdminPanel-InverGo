@@ -13,7 +13,7 @@ export const AddUser = () => {
     const [regActivo, setRegActivo] = useState({});
 
     useEffect(() => {
-        axios.get("http://localhost:4000/registros/estado/activo").then((resp) => {
+        axios.get("https://backend-invergo-production.up.railway.app/registros/estado/activo").then((resp) => {
             setRegActivo(resp.data);
         });
     }, []);
@@ -77,7 +77,7 @@ export const AddUser = () => {
         }
 
         if (isFormValid()) {
-            axios.put(`http://localhost:4000/registros/${regActivo._id}`, regModify).then(() => {
+            axios.put(`https://backend-invergo-production.up.railway.app/registros/${regActivo._id}`, regModify).then(() => {
                 dispatch(startRegisterWithEmailPasswordName(email, name, usuario));
             });
         }

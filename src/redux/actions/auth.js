@@ -18,7 +18,7 @@ export const startRegisterWithEmailPasswordName = (email, name, usuario) => {
                     uidFirebase: user.uid
                 }
 
-                axios.post('http://localhost:4000/usuarios', userDB).then(res => {
+                axios.post('https://backend-invergo-production.up.railway.app/usuarios', userDB).then(res => {
                     Toast.fire({ icon: 'success', title: 'Usuario Creado Correctamente' }).then(() => {
                         setTimeout(() => {
                             window.location.reload();
@@ -35,9 +35,9 @@ export const startRegisterWithEmailPasswordName = (email, name, usuario) => {
 export const updateUserInfoDB = (usuario, registro) => {
 
     return async (dispatch, getState) => {
-        axios.put(`http://localhost:4000/usuarios/${usuario._id}`, usuario).then(res => {
+        axios.put(`https://backend-invergo-production.up.railway.app/usuarios/${usuario._id}`, usuario).then(res => {
 
-            axios.put(`https://admin-panel-invergo.herokuapp.com/reg/${registro._id}`, registro).then(res => {
+            axios.put(`https://backend-invergo-production.up.railway.app/registros/${registro._id}`, registro).then(res => {
 
                 Toast.fire({ icon: 'success', title: 'Usuario Actualizado con Exito' }).then(() => {
                     setTimeout(() => {
